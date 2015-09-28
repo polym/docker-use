@@ -13,8 +13,8 @@ RUN echo 'root:root' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 RUN mkdir -p /root/.ssh/
-ADD .ssh/id_rsa /root/.ssh/
-ADD .ssh/id_rsa.pub /root/.ssh/
+#ADD .ssh/id_rsa /root/.ssh/
+#ADD .ssh/id_rsa.pub /root/.ssh/
 
 EXPOSE 22
 EXPOSE 1001
