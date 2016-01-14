@@ -15,6 +15,8 @@ RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/ss
 RUN mkdir -p /root/.ssh/
 #ADD .ssh/id_rsa /root/.ssh/
 #ADD .ssh/id_rsa.pub /root/.ssh/
+VOLUME ["/mohb"]
+WORKDIR "/mohb"
 
 EXPOSE 22
 EXPOSE 1001
