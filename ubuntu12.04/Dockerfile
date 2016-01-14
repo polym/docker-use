@@ -12,7 +12,7 @@ RUN mkdir /var/run/sshd
 RUN echo 'root:root' | chpasswd
 RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
-RUN mkdir -p /root/.ssh/
+RUN mkdir -p /root/.ssh/ /mohb/
 #ADD .ssh/id_rsa /root/.ssh/
 #ADD .ssh/id_rsa.pub /root/.ssh/
 VOLUME ["/mohb"]
